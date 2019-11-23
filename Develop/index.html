@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="Moment.js"></script>
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+
+      <div id="momentTD"></div>
+    </header>
+    <div class="container">
+      <!-- Button 1 -->
+      <form class="form-inline">
+        <p id="ptest"></p>
+        <div class="form-group mb-2">
+          <label for="staticEmail2" class="sr-only">Email</label>
+          <input
+            type="text"
+            readonly
+            class="form-control-plaintext time-block"
+            id="staticEmail2"
+            value="9AM"
+          />
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Your events</label>
+
+          <textarea id="nineToDo" class="form-controntrol" rows="3"></textarea>
+        </div>
+        <button id="submit9" class="btn btn-primary mb-2 saveBtn">
+          Save
+        </button>
+      </form>
+<!-- Button 2 am-->
+      <form class="form-inline">
+        <div class="form-group mb-2">
+          <label for="staticEmail2" class="sr-only"></label>
+          <input
+            type="text"
+            readonly
+            class="form-control-plaintext time-block"
+            id="staticEmail2"
+            value="10AM"
+          />
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Your events</label>
+
+          <textarea id="tenToDo" class="form-controntrol" rows="3"></textarea>
+        </div>
+        <button id="submit10" class="btn btn-primary mb-2 saveBtn">
+          Save
+        </button>
+      </form>
+    
+<!-- Button 3 12pm-->
+    <form class="form-inline">
+        <div class="form-group mb-2">
+          <label for="staticEmail2" class="sr-only"></label>
+          <input
+            type="text"
+            readonly
+            class="form-control-plaintext time-block"
+            id="staticEmail2"
+            value="11AM"
+          />
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">Your events</label>
+
+          <textarea id="elevenToDo" class="form-controntrol" rows="3"></textarea>
+        </div>
+        <button id="submit11" class="btn btn-primary mb-2 saveBtn">
+          Save
+        </button>
+      </form>
+
+      
+   
+
+  <!-- Button 4 1pm-->
+  <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only"></label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext time-block"
+          id="staticEmail2"
+          value="12PM"
+        />
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Your events</label>
+
+        <textarea id="twelveToDo" class="form-controntrol" rows="3"></textarea>
+      </div>
+      <button id="submit12" class="btn btn-primary mb-2 saveBtn">
+        Save
+      </button>
+      </form>
+    
+      <!-- Button 5 1pm -->
+  <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only"></label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext time-block"
+          id="staticEmail2"
+          value="1PM"
+        />
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Your events</label>
+
+        <textarea id="oneToDo" class="form-controntrol" rows="3"></textarea>
+      </div>
+      <button id="submit1" class="btn btn-primary mb-2 saveBtn">
+        Save
+      </button>
+      </form>
+    
+          <!-- Button 6 2pm -->
+  <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only"></label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext time-block"
+          id="staticEmail2"
+          value="2PM"
+        />
+      </div>
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="inputPassword2" class="sr-only">Your events</label>
+
+        <textarea id="twoToDo" class="form-controntrol" rows="3"></textarea>
+      </div>
+      <button id="submit2" class="btn btn-primary mb-2 saveBtn">
+        Save
+      </button>
+      </form>
+
+       <!-- Button 7 3pm -->
+      <form class="form-inline">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only"></label>
+            <input
+              type="text"
+              readonly
+              class="form-control-plaintext time-block"
+              id="staticEmail2"
+              value="3PM"
+            />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Your events</label>
+    
+            <textarea id="threeToDo" class="form-controntrol" rows="3"></textarea>
+          </div>
+          <button id="submit3" class="btn btn-primary mb-2 saveBtn">
+            Save
+          </button>
+          </form>
+
+             <!-- Button 8 4pm -->
+      <form class="form-inline">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only"></label>
+            <input
+              type="text"
+              readonly
+              class="form-control-plaintext time-block"
+              id="staticEmail2"
+              value="4PM"
+            />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Your events</label>
+    
+            <textarea id="fourToDo" class="form-controntrol" rows="3"></textarea>
+          </div>
+          <button id="submit4" class="btn btn-primary mb-2 saveBtn">
+            Save
+          </button>
+          </form>
+    
+        <!-- Button 9 5pm -->
+      <form class="form-inline">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only"></label>
+            <input
+              type="text"
+              readonly
+              class="form-control-plaintext time-block"
+              id="staticEmail2"
+              value="5PM"
+            />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">Your events</label>
+    
+            <textarea id="fiveToDo" class="form-controntrol" rows="3"></textarea>
+          </div>
+          <button id="submit5" class="btn btn-primary mb-2 saveBtn">
+            Save
+          </button>
+          </form>
+    
+    <!-- DO NOT PASTE BELOW THIS LINE!!! -->
+    </div> 
+  </div> 
+</div>
+  </body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+      
+      var Now = moment().format("MMMM Do YYYY, h:mm a");
+      var Date = document.getElementById("momentTD");
+      Date.innerHTML = Now;
+
+
+      //button 1 9am
+      document.querySelector("#submit9").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo9 = document.getElementById("nineToDo").value;
+        localStorage.setItem("toDo9", toDo9);
+        getData9();
+      });
+
+      getData9();
+      function getData9() {
+        var field1 = localStorage.getItem("toDo9");
+        document.getElementById("nineToDo").value = field1;
+      }
+
+      //button2 10am
+      document.querySelector("#submit10").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo10 = document.getElementById("tenToDo").value;
+        localStorage.setItem("toDo10", toDo10);
+        getData10();
+      });
+
+      getData10();
+      function getData10() {
+        var field2 = localStorage.getItem("toDo10");
+        document.getElementById("tenToDo").value = field2;
+      }
+
+      getData9();
+      function getData9() {
+        var field1 = localStorage.getItem("toDo9");
+        document.getElementById("nineToDo").value = field1;
+      }
+
+      //button3 11am
+      document.querySelector("#submit11").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo11 = document.getElementById("elevenToDo").value;
+        localStorage.setItem("toDo11", toDo11);
+        getData11();
+      });
+
+      getData11();
+      function getData11() {
+        var field3 = localStorage.getItem("toDo11");
+        document.getElementById("elevenToDo").value = field3;
+      }
+
+      //button4 12pm
+      document.querySelector("#submit12").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo12 = document.getElementById("twelveToDo").value;
+        localStorage.setItem("toDo12", toDo12);
+        getData12();
+      });
+
+      getData12();
+      function getData12() {
+        var field4 = localStorage.getItem("toDo12");
+        document.getElementById("twelveToDo").value = field4;
+      }
+
+      //button5 1pm
+      document.querySelector("#submit1").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo1 = document.getElementById("oneToDo").value;
+        localStorage.setItem("toDo1", toDo1);
+        getData1();
+      });
+
+      getData1();
+      function getData1() {
+        var field5 = localStorage.getItem("toDo1");
+        document.getElementById("oneToDo").value = field5;
+      }
+
+       //button 6 2pm
+       document.querySelector("#submit2").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo2 = document.getElementById("twoToDo").value;
+        localStorage.setItem("toDo2", toDo2);
+        getData2();
+      });
+
+      getData2();
+      function getData2() {
+        var field6 = localStorage.getItem("toDo2");
+        document.getElementById("twoToDo").value = field6;
+      }
+
+          //button 7 3pm
+          document.querySelector("#submit3").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo3 = document.getElementById("threeToDo").value;
+        localStorage.setItem("toDo3", toDo3);
+        getData3();
+      });
+
+      getData3();
+      function getData3() {
+        var field7 = localStorage.getItem("toDo3");
+        document.getElementById("threeToDo").value = field7;
+      }
+
+          //button 8 4pm
+          document.querySelector("#submit4").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo4 = document.getElementById("fourToDo").value;
+        localStorage.setItem("toDo4", toDo4);
+        getData4();
+      });
+
+      getData4();
+      function getData4() {
+        var field8 = localStorage.getItem("toDo4");
+        document.getElementById("fourToDo").value = field8;
+      }
+
+        //button 9 5pm
+        document.querySelector("#submit5").addEventListener("click", function() {
+        event.preventDefault();
+        var toDo5 = document.getElementById("fiveToDo").value;
+        localStorage.setItem("toDo5", toDo5);
+        getData5();
+      });
+
+      getData5();
+      function getData5() {
+        var field9 = localStorage.getItem("toDo5");
+        document.getElementById("fiveToDo").value = field9;
+      }
+
+    </script>
+  </body>
+</html>
